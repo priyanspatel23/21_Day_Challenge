@@ -103,6 +103,7 @@ app.className = 'app';
 root.appendChild(app);
 
 const toggleBtn = document.createElement('button');
+toggleBtn.id = "theme-toggle";
 toggleBtn.innerText = "Dark";
 toggleBtn.style.position = "fixed";
 toggleBtn.style.top = "20px";
@@ -111,25 +112,21 @@ toggleBtn.style.padding = "8px 12px";
 toggleBtn.style.cursor = "pointer";
 
 document.body.appendChild(toggleBtn);
-
-// ✅ LOAD SAVED THEME (NEW)
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
   app.classList.add("dark");
-  toggleBtn.innerText = "Light";
+  toggleBtn.innerText = "☀️"; // show sun
 } else {
-  toggleBtn.innerText = "Dark";
+  toggleBtn.innerText = "🌙"; // show moon
 }
-
-// ✅ TOGGLE + SAVE (UPDATED)
 toggleBtn.addEventListener('click', () => {
   app.classList.toggle('dark');
 
   if (app.classList.contains('dark')) {
-    toggleBtn.innerText = "Light";
+    toggleBtn.innerText = "☀️";
     localStorage.setItem("theme", "dark");
   } else {
-    toggleBtn.innerText = "Dark";
+    toggleBtn.innerText = "🌙";
     localStorage.setItem("theme", "light");
   }
 });
