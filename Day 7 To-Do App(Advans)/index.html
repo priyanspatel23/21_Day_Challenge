@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo UI</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">P</div>
+        <h1>Todo-Application</h1>
+    </div>
+    <div class="flex">
+        <div class="card">
+            <div class="form">
+                <h3>Add New Task</h3>
+                <label>Category</label>
+                <select id="category">
+                    <option value="">Select Category</option>
+                    <option>Work</option>
+                    <option>Study</option>
+                    <option>Personal</option>
+                </select>
+                <label>Task name</label>
+                <input id="task" placeholder="e.g. Prepare chapter-3 notes">
+                <label>Task date & time</label>
+                <input type="datetime-local" id="date">
+                <small>If empty, created time will be used.</small>
+                <label>Expiry date</label>
+                <input type="date" id="expiry">
+                <small>Optional</small>
+                <label>Task added by</label>
+                <input id="user" placeholder="Your name">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+            <div class="tasks">
+                <h3>Your Tasks</h3>
+                <div id="list"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
