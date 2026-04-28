@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+  <div class="header">
+    <h1>Weather</h1>
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Search city...">
+      <button onclick="getWeather()">🔍</button>
+    </div>
+    <div class="toggle">
+      <span class="active">°C</span>
+      <span>°F</span>
+    </div>
+  </div>
+  <div class="tabs">
+    <button class="active">Current</button>
+    <button>7-Day</button>
+    <button>Monthly</button>
+  </div>
+  <div class="grid">
+    <div class="card big">
+      <p class="location">📍 <span id="cityName">City</span></p>
+      <h2 id="country">---</h2>
+      <div class="temp-section">
+        <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" class="icon">
+        <h1 id="temp">--°</h1>
+      </div>
+      <p>Wind speed: <span id="wind">--</span> km/h</p>
+      <p class="tag">MILD</p>
+    </div>
+    <div class="card">
+      <h3>Hourly Forecast</h3>
+      <div id="hourly" class="hourly-box"></div>
+    </div>
+    <div class="card">
+      <h3>Air Quality</h3>
+      <p>Not available</p>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1f3c73, #2a6c9e);
+  color: white;
+}
+.app {
+  padding: 20px 40px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+.search button {
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  background: gold;
+  cursor: pointer;
+}
+.toggle span {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #2f4f7f;
+  margin-left: 5px;
+}
+.toggle .active {
+  background: gold;
+  color: black;
+}
+.tabs {
+  margin: 20px 0;
+}
+.tabs button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 10px;
+  background: #2f4f7f;
+  color: white;
+}
+.tabs .active {
+  background: gold;
+  color: black;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+.temp-section {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  width: 60px;
+  margin-right: 10px;
+}
+.temp-section h1 {
+  font-size: 60px;
+}
+.tag {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px 12px;
+  background: green;
+  border-radius: 20px;
+}
+.hourly-box {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.hourly-box div {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
