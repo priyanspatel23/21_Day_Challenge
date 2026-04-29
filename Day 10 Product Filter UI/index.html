@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="shell">
+        <aside class="sidebar">
+            <div class="sidebar-logo">my<span>store</span></div>
+
+            <div class="filter-section">
+                <div class="filter-label">Category</div>
+                <div class="filter-tags" id="cats">
+                    <span class="tag active" data-cat="all">All</span>
+                    <span class="tag" data-cat="kitchen">Kitchen</span>
+                    <span class="tag" data-cat="lighting">Lighting</span>
+                    <span class="tag" data-cat="textiles">Textiles</span>
+                    <span class="tag" data-cat="decor">Decor</span>
+                    <span class="tag" data-cat="furniture">Furniture</span>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-label">Material</div>
+                <div class="filter-tags" id="mats">
+                    <span class="tag" data-mat="wood">Wood</span>
+                    <span class="tag" data-mat="ceramic">Ceramic</span>
+                    <span class="tag" data-mat="linen">Linen</span>
+                    <span class="tag" data-mat="metal">Metal</span>
+                    <span class="tag" data-mat="glass">Glass</span>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-label">Price range</div>
+                <div class="price-range">
+                    <input type="range" id="price-slider" min="0" max="500" value="350" step="10">
+                    <div class="price-labels"><span>₹0</span><span id="price-val">₹350</span></div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-label">Rating</div>
+                <div class="filter-tags" id="ratings">
+                    <span class="tag" data-rat="4">4★ & up</span>
+                    <span class="tag" data-rat="3">3★ & up</span>
+                    <span class="tag" data-rat="0">Any</span>
+                </div>
+            </div>
+
+            <button class="clear-btn" id="clear-btn">Clear all filters</button>
+        </aside>
+
+        <main class="main">
+            <div class="topbar">
+                <div class="result-count"><strong id="count">0</strong> products found</div>
+                <div style="display:flex;align-items:center;gap:12px">
+                    <div class="sort-wrap">
+                        <label>Sort</label>
+                        <select class="sort-select" id="sort-sel">
+                            <option value="name">Name A–Z</option>
+                            <option value="price-asc">Price ↑</option>
+                            <option value="price-desc">Price ↓</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                    <div class="view-btns">
+                        <button class="view-btn active" id="grid-btn" title="Grid view">⊞</button>
+                        <button class="view-btn" id="list-btn" title="List view">☰</button>
+                    </div>
+                </div>
+            </div>
+            <div class="active-chips" id="active-chips"></div>
+            <div class="grid" id="product-grid"></div>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
