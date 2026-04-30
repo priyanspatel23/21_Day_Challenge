@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="box">
+
+        <!-- START SCREEN -->
+        <div id="start">
+            <h1>📝 Quiz App</h1>
+            <p>10 questions across science, history &amp; general knowledge.<br>You have 15 seconds per question!</p>
+            <div class="info-row">
+                <div class="info-item"><strong>10</strong><span>Questions</span></div>
+                <div class="info-item"><strong>15s</strong><span>Per question</span></div>
+                <div class="info-item"><strong>Mixed</strong><span>Difficulty</span></div>
+            </div>
+            <button id="start-btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+        <div id="quiz" style="display:none">
+            <div class="header">
+                <span id="q-label">Question 1 of 10</span>
+                <div class="timer" id="timer">15</div>
+            </div>
+            <div class="progress">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <div class="feedback" id="feedback"></div>
+            <button id="next-btn" onclick="nextQ()">Next →</button>
+        </div>
+
+        <!-- RESULT SCREEN -->
+        <div id="result">
+            <div class="score-circle">
+                <span id="score-pct">0%</span>
+                <span>score</span>
+            </div>
+            <h2 id="result-title">Well done!</h2>
+            <p id="result-msg">Here's your breakdown:</p>
+            <div class="stats">
+                <div class="stat"><strong id="s-correct">0</strong><span>Correct</span></div>
+                <div class="stat"><strong id="s-wrong">0</strong><span>Wrong</span></div>
+                <div class="stat"><strong id="s-avg">0s</strong><span>Avg. time</span></div>
+            </div>
+            <button id="retry-btn" onclick="startQuiz()">Try Again</button>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
