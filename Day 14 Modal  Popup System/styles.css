@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1f1c4d, #0d0d25);
+}
+
+.open-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #a78bfa, #6d28d9);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 30, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  width: 320px;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  transform: scale(0.6) translateY(40px);
+  opacity: 0;
+  transition: 0.4s ease;
+  box-shadow: 0 0 40px rgba(167, 139, 250, 0.3);
+}
+
+.overlay.show .modal {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+h2 {
+  color: #a78bfa;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.action {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #a78bfa;
+  color: white;
+  cursor: pointer;
+}
